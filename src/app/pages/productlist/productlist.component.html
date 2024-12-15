@@ -1,0 +1,27 @@
+
+<div class="productContainer p-3">
+
+  <mat-card class="card-container-product mat-elevation-z0 col-xl-2 col-lg-2 col-md-4 col-sm-12 col-xs-12 col-12" *ngFor="let i of filteredproductDetails" (click)="showProductDetails(i)">
+    <!-- <div class="image-container"  [id]="'carousel'+ x" >
+        <img mat-card-image [src]="'data:image/png;base64,' + i.images[i.currentIndex].product_image" alt="Image carousel" class="image-fluid"  (mouseenter)="nextImage(i)"/>
+    </div> -->
+
+    <div class="image-container d-flex justify-content-center mt-3">
+      <img mat-card-image [src]="'data:image/png;base64,' + i.images[0].product_image" alt="Image carousel" class="image-fluid" />
+    </div>
+    <mat-card-content class="m-3">
+        <span class="product_name">Bowsar 26 Gauge 3 door Steel Almirah</span>
+        <span class="light_weight">Steel</span>    
+       
+    </mat-card-content>
+  </mat-card>
+
+
+
+    <div class="d-flex justify-content-center mr-5 mt-4">
+
+      <button mat-raised-button class="btn-cancel" (click)="back()">Back</button>
+
+    </div>
+
+  </div>
