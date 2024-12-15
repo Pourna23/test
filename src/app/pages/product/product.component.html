@@ -1,0 +1,39 @@
+<div class="main-container">
+
+  <div class="d-flex justify-content-start">
+
+    <mat-form-field class='f-item col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ml-xl-5 ml-lg-5'>
+
+      <mat-label>
+
+        <mat-icon>search</mat-icon>Search Product
+
+      </mat-label>
+
+      <input (keyup)="onSearch()" [(ngModel)]="searchQuery" placeholder="Search a product here" matInput>
+
+    </mat-form-field>
+
+  </div>
+
+  <div class="card-container">
+
+    <mat-card *ngFor="let card of filteredItems"
+
+      class="custom-card ml-5 mr-5 mb-5 col-xl-3 col-lg-3 col-md-12 col-xs-12 col-12"
+
+      [ngStyle]="{'background-image': 'url(' + 'data:image/png;base64,'+card.product_image + ')'}" (click)="showProduct(card)">
+
+      <div class="card-overlay"></div>
+
+      <mat-card-content class="cardcontent">
+
+        <h2>{{ card.product_name }}</h2>
+      </mat-card-content>
+
+    </mat-card>
+
+  </div>
+
+</div>
+
